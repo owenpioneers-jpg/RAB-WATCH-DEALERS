@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | RAB Watch Dealers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">RAB Watch Dealers</div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Collections</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact-section fade">
+    <h1>Get In Touch</h1>
+    <p class="contact-intro">
+      Looking for premium watches or need assistance?  
+      Reach out to RAB Watch Dealers anytime.
+    </p>
+
+    <div class="contact-whatsapp fade">
+  <h3>Prefer WhatsApp?</h3>
+  <p>Chat with us instantly to place your order or ask a question.</p>
+
+  <a 
+    href="https://wa.me/254742184483?text=Hi%20RAB%20Watch%20Dealers%2C%20I%20would%20like%20to%20place%20an%20order%20or%20enquire%20about%this%20watch."
+    target="_blank"
+    class="order-whatsapp"
+  >
+    Order via WhatsApp
+  </a>
+</div>
+
+
+    <div class="contact-wrapper">
+
+     
+      <div class="contact-info">
+
+        <div class="info-box">
+          <span>PHONE</span>
+          <p>+254 742 184 483</p>
+        </div>
+
+        <div class="info-box">
+          <span>EMAIL</span>
+          <p>icardiowen254@gmail.com</p>
+        </div>
+
+      </div>
+
+
+      
+      <div class="contact-socials">
+        <h3>Connect With Us</h3>
+
+        <div class="social-icons">
+          <a href="https://instagram.com/owenicardi17" target="_blank">
+            📸 Instagram
+          </a>
+          <a href="https://twitter.com/" target="_blank">
+            🐦 Twitter / X
+          </a>
+          <a href="https://wa.me/254742184483" target="_blank">
+            💬 WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    © 2025 RAB Watch Dealers • Built by Owen&Co.
+  </footer>
+
+ 
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    const faders = document.querySelectorAll(".fade");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fade => observer.observe(fade));
+  </script>
+
+</body>
+</html>

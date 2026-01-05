@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAB Watch Dealers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  
+  <nav class="navbar">
+    <div class="logo">RAB Watch Dealers</div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="products.html">Collections</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-text fade">
+      <h1>Timeless Luxury</h1>
+      <p>Premium watches designed for men & women</p>
+      <a href="products.html" class="cta-btn">Explore Collection</a>
+    </div>
+  </section>
+
+  
+  <section class="collections" id="collections">
+    <div class="collection-card fade">
+      <img src="images/rabcurren.jpg" alt="Men Watch">
+      <h3>Prestige for masculinity</h3>
+    </div>
+
+    <div class="collection-card fade">
+      <img src="images/rabCarpenter.jpg" alt="Men Watch">
+      <h3>Just like the old days</h3>
+    </div>
+
+    <div class="collection-card fade">
+      <img src="images/rabfossil.jpg" alt="Women Watch">
+      <h3>Opulent women fossil</h3>
+    </div>
+
+     <div class="collection-card fade">
+      <img src="images/rabPanthera.jpg" alt="Women Watch">
+      <h3>Refined Panthera</h3>
+    </div>
+  
+  </section>
+  
+
+  
+  <footer class="footer" id="footer">
+    <div class="footer-content fade">
+      <h3>Rab Watch Dealers</h3>
+      <p>Modern luxury watches with timeless design.</p>
+
+      <div class="socials">
+        <a href="mailto:owenicardi254@gmail.com">Email</a>
+        <a href="https://instagram.com/owenicardi17" target="_blank">Instagram</a>
+        <a href="https://wa.me/254742184483" target="_blank">WhatsApp</a>
+      </div>
+
+      <span class="copyright">
+        © 2025 RAB Watch Dealers • Built by Owen&Co.
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    
+    const faders = document.querySelectorAll(".fade");
+
+    const appearOnScroll = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fade => {
+      appearOnScroll.observe(fade);
+    });
+  </script>
+  <script>
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+
+</body>
+</html>

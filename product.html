@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details | RAB Watch Dealers</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .product-container {
+      max-width: 900px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 15px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .product-name {
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .product-img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 22px;
+      color: #c49a3a;
+      margin-bottom: 15px;
+    }
+
+    .product-desc {
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: black;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    @media(max-width:768px) {
+      .product-img { width: 80%; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">RAB Watch Dealers</div>
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html" class="active">PRODUCTS</a></li>
+  </ul>
+</nav>
+
+<section class="product-container">
+
+
+ <!-- Back button -->
+<a href="products.html" class="back-btn" style="color:white; font-weight:bold;">⬅ Back to Watches</a>
+
+
+  <!-- Product Title -->
+  <h1 class="product-name" id="productName">Watch Name</h1>
+
+  <!-- Slogan / tagline -->
+  <p class="tagline">Wear Time. Wear Confidence.</p>
+
+  <!-- Product Image -->
+  <img id="productImg" class="product-img" src="">
+
+  <!-- Price -->
+  <p class="price" id="productPrice">KES 0</p>
+
+  <!-- Description -->
+  <p class="product-desc">
+    Premium luxury timepiece from RAB Watch Dealers. Built for style, precision, and durability.
+  </p>
+
+</section>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  const name = params.get("name");
+  const price = params.get("price");
+  const img = params.get("img");
+
+  document.getElementById("productName").textContent = name || "Watch";
+  document.getElementById("productPrice").textContent = price ? "KES " + price : "";
+  document.getElementById("productImg").src = img ? "images/" + img : "images/placeholder.jpg";
+  document.querySelectorAll(".products-grid a").forEach(card => {
+  
+  const footer = document.createElement("div");
+  footer.className = "product-card-footer";
+
+  footer.innerHTML = `
+    <span>Add to Cart</span>
+    <div class="cart-icon">🛒</div>
+  `;
+
+  card.appendChild(footer);
+});
+</script>
+
+</body>
+</html>

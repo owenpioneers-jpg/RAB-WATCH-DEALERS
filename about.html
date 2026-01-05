@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – RAB Watch Dealers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo-container">
+   
+    <h1 class="logo-text">RAB WATCH</h1>
+  </div>
+
+  <div class="menu-icon" id="menuIcon">
+    ☰
+</div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html">PRODUCTS</a></li>
+    <li><a href="contactus.html">CONTACT</a></li>
+    <li><a href="about.html" class="active">ABOUT</a></li>
+  </ul>
+</nav>
+
+<section class="about-hero fade">
+  <h1>About RAB Watch Dealers</h1>
+  <p>
+    RAB Watch Dealers is a premium watch brand focused on timeless design,
+    precision, and confidence. We believe a watch is more than time — it’s identity.
+  </p>
+</section>
+
+<section class="about-section fade">
+  <h2>Our Mission</h2>
+  <p>
+    To empower individuals with watches that reflect confidence, discipline,
+    and personal excellence — every second, every day.
+  </p>
+</section>
+
+<section class="about-section fade">
+  <h2>Our Vision</h2>
+  <p>
+    To become a leading watch dealer in Kenya and beyond, delivering quality,
+    elegance, and trust to every customer.
+  </p>
+  <p>
+    Time is power — and we help you wear it with purpose.
+  </p>
+</section>
+
+<section class="ceo-section fade">
+  <img src="images/rabwatch.jpg" class="ceo-img" alt="Founder image">
+
+  <div class="ceo-text">
+    <h2>Meet the Founder</h2>
+    <p>
+      Hey I'm <strong>Owen Amisi</strong>, the founder of RAB Watch Dealers.
+      I built this brand with one goal — to redefine how watches are worn and valued
+      in Kenya. With the aim of bringing <strong>style</strong>,<strong>aura</strong> and <strong>elegance</strong> in modern society.
+    </p>
+
+    <p>
+      Every timepiece we offer represents precision, confidence, and style.
+      Welcome to a brand where time truly matters.
+      <strong>the brand that never sleeps</strong>
+      <strong>the walking masterpiece</strong>
+    </p>
+  </div>
+</section>
+
+<footer class="footer fade">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>RAB Watch Dealers</h3>
+      <p>Wear time. Wear confidence.</p>
+    </div>
+    <div class="socials">
+        <a href="mailto:icardiowen254@gmail.com">Email</a>
+        <a href="https://instagram.com/owenicardi17" target="_blank">Instagram</a>
+        <a href="https://wa.me/254742184483" target="_blank">WhatsApp</a>
+      </div>
+   <p class="footer-bottom">© 2025 RAB Watch Dealers. All Rights Reserved.</p>
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+faders.forEach(fade => observer.observe(fade));
+const menuIcon = document.getElementById("menuIcon");
+const navLinks = document.getElementById("nav-links");
+
+menuIcon.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+</script>
+
+
+</body>
+</html>
