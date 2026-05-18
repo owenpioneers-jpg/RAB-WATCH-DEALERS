@@ -11,20 +11,20 @@
 
 <body>
 
-<nav class="navbar">
-  <div class="logo-container">
-   
-    <h1 class="logo-text">RAB WATCH</h1>
-  </div>
+<nav class="navbar" id="navbar">
+  <div class="logo">RAB WATCH</div>
 
-  <div class="menu-icon" id="menuIcon">
+  <div class="menu-toggle" id="menuToggle">
     ☰
-</div>
-  <ul class="nav-links" id="nav-links">
+  </div>
+  <ul class="nav-links" id="navLinks">
     <li><a href="index.html">HOME</a></li>
     <li><a href="products.html">PRODUCTS</a></li>
+    <li><a href="men.html">MEN</a></li>
+    <li><a href="women.html">WOMEN</a></li>
     <li><a href="contactus.html">CONTACT</a></li>
     <li><a href="about.html" class="active">ABOUT</a></li>
+    <li><a href="cart.html">🛒 Cart <span id="cartCount">0</span></a></li>
   </ul>
 </nav>
 
@@ -69,9 +69,13 @@
     <p>
       Every timepiece we offer represents precision, confidence, and style.
       Welcome to a brand where time truly matters.
-      <strong>the brand that never sleeps</strong>
-      <strong>the walking masterpiece</strong>
     </p>
+
+    <div class="founder-tags">
+      <span class="tag">⏰ The brand that never sleeps</span>
+      <span class="tag">✨ The walking masterpiece</span>
+      <span class="tag">💎 Luxury redefined</span>
+    </div>
   </div>
 </section>
 
@@ -91,6 +95,37 @@
 </footer>
 
 <script>
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+  menuToggle.textContent = navLinks.classList.contains("show") ? "✕" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+    menuToggle.textContent = "☰";
+  });
+});
+
+// Dropdown menu functionality
+document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+  toggle.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+});
+
 const faders = document.querySelectorAll('.fade');
 
 const observer = new IntersectionObserver(entries => {
@@ -99,15 +134,9 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add('show');
     }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.1 });
 
 faders.forEach(fade => observer.observe(fade));
-const menuIcon = document.getElementById("menuIcon");
-const navLinks = document.getElementById("nav-links");
-
-menuIcon.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
 </script>
 
 

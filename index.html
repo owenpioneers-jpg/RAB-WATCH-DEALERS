@@ -3,86 +3,247 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAB Watch Dealers</title>
+  <title>RAB Watch Dealers - Premium Luxury Watches</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  
-  <nav class="navbar">
-    <div class="logo">RAB Watch Dealers</div>
+  <nav class="navbar" id="navbar">
+    <div class="logo">RAB WATCH</div>
     <div class="menu-toggle" id="menuToggle">☰</div>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="products.html">Collections</a></li>
-      <li><a href="contactus.html">Contact</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="index.html" class="active">HOME</a></li>
+      <li><a href="products.html">PRODUCTS</a></li>
+      <li><a href="men.html">MEN</a></li>
+      <li><a href="women.html">WOMEN</a></li>
+      <li><a href="contactus.html">CONTACT</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="cart.html">🛒 Cart <span id="cartCount">0</span></a></li>
     </ul>
   </nav>
 
   <section class="hero" id="home">
     <div class="hero-text fade">
       <h1>Timeless Luxury</h1>
-      <p>Premium watches designed for men & women</p>
+      <p>Experience the perfect blend of craftsmanship, precision, and elegance. Every watch tells a story of excellence.</p>
       <a href="products.html" class="cta-btn">Explore Collection</a>
     </div>
   </section>
 
-  
+  <!-- Featured Collections -->
   <section class="collections" id="collections">
     <div class="collection-card fade">
-      <img src="images/rabcurren.jpg" alt="Men Watch">
-      <h3>Prestige for masculinity</h3>
+      <img src="images/rabcurren.jpg" alt="Men's Premium Collection">
+      <h3>Men's Prestige</h3>
+      <p>Bold, confident, timeless</p>
     </div>
 
     <div class="collection-card fade">
-      <img src="images/rabCarpenter.jpg" alt="Men Watch">
-      <h3>Just like the old days</h3>
+      <img src="images/rabCarpenter.jpg" alt="Classic Collection">
+      <h3>Vintage Classics</h3>
+      <p>Heritage meets modernity</p>
     </div>
 
     <div class="collection-card fade">
-      <img src="images/rabfossil.jpg" alt="Women Watch">
-      <h3>Opulent women fossil</h3>
+      <img src="images/rabfossil.jpg" alt="Women's Luxury Collection">
+      <h3>Women's Elegance</h3>
+      <p>Refined and sophisticated</p>
     </div>
 
-     <div class="collection-card fade">
-      <img src="images/rabPanthera.jpg" alt="Women Watch">
-      <h3>Refined Panthera</h3>
+    <div class="collection-card fade">
+      <img src="images/rabPanthera.jpg" alt="Premium Collection">
+      <h3>Premium Panthera</h3>
+      <p>Luxury redefined</p>
     </div>
-  
   </section>
-  
 
-  
+  <!-- Why Choose RAB -->
+  <section class="why-choose fade">
+    <h2>Why Choose RAB Watch Dealers</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⏱️</div>
+        <h3>Premium Quality</h3>
+        <p>Handpicked watches from world-renowned brands with precision engineering.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✨</div>
+        <h3>Authentic Products</h3>
+        <p>100% genuine watches with warranty and certification guaranteed.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚚</div>
+        <h3>Fast Delivery</h3>
+        <p>Quick and secure delivery across Kenya with professional packaging.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Expert Support</h3>
+        <p>Dedicated customer service team ready to assist you anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials fade">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"The quality is exceptional and the service was impeccable. My watch arrived exactly as described. Highly recommended!"</p>
+        <h4>- David Kimani</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"I've purchased 3 watches from RAB and never been disappointed. Best prices and authentic products in Nairobi!"</p>
+        <h4>- Sarah Ochieng</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"Amazing collection and super quick delivery. The team went above and beyond to help me choose the perfect watch."</p>
+        <h4>- James Wanjiru</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section fade">
+    <div class="cta-content">
+      <h2>Ready to Make a Statement?</h2>
+      <p>Join thousands of satisfied customers who trust RAB for premium timepieces</p>
+      <div class="cta-buttons">
+        <a href="products.html" class="cta-btn primary">Shop Now</a>
+        <a href="contactus.html" class="cta-btn secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section fade">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>🕐 Are all watches genuine?</h4>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! We guarantee 100% authentic watches with proper certification. Each timepiece is carefully inspected before delivery.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>🚚 What's the delivery timeframe?</h4>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We deliver across Kenya within 2-5 business days depending on location. Orders are securely packaged and tracked.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>💱 Do you offer payment plans?</h4>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we work with WhatsApp for custom payment arrangements. Contact us for flexible payment options on premium watches.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>⏳ What's the warranty period?</h4>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>All watches come with a 1-year warranty covering manufacturing defects. Water resistance and battery are guaranteed.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>🔧 Do you offer repairs & servicing?</h4>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! We provide professional repair and servicing for all watch brands. Contact us for maintenance packages.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>💚 Can I return a watch?</h4>
+          <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We offer a 30-day return policy on unworn watches. Items must be in original condition with packaging.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer" id="footer">
     <div class="footer-content fade">
-      <h3>Rab Watch Dealers</h3>
-      <p>Modern luxury watches with timeless design.</p>
+      <h3>RAB Watch Dealers</h3>
+      <p>Wear time. Wear confidence. Wear excellence.</p>
 
       <div class="socials">
-        <a href="mailto:owenicardi254@gmail.com">Email</a>
-        <a href="https://instagram.com/owenicardi17" target="_blank">Instagram</a>
-        <a href="https://wa.me/254742184483" target="_blank">WhatsApp</a>
+        <a href="mailto:owenicardi254@gmail.com">📧 Email</a>
+        <a href="https://instagram.com/owenicardi17" target="_blank">📸 Instagram</a>
+        <a href="https://wa.me/254742184483" target="_blank">💬 WhatsApp</a>
       </div>
 
       <span class="copyright">
-        © 2025 RAB Watch Dealers • Built by Owen&Co.
+        © 2025 RAB Watch Dealers • Premium Luxury Watches in Kenya
       </span>
     </div>
   </footer>
 
   <script>
-    
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
 
     menuToggle.addEventListener("click", () => {
       navLinks.classList.toggle("show");
+      // Change icon between ☰ and ✕
+      menuToggle.textContent = navLinks.classList.contains("show") ? "✕" : "☰";
     });
 
-    
+    // Close menu when link is clicked
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // FAQ Toggle
+    document.querySelectorAll(".faq-question").forEach(question => {
+      question.addEventListener("click", () => {
+        const item = question.parentElement;
+        item.classList.toggle("active");
+        const toggle = question.querySelector(".faq-toggle");
+        toggle.textContent = item.classList.contains("active") ? "−" : "+";
+      });
+    });
+
+    // Fade in animation
     const faders = document.querySelectorAll(".fade");
 
     const appearOnScroll = new IntersectionObserver(entries => {
@@ -91,24 +252,53 @@
           entry.target.classList.add("show");
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
     faders.forEach(fade => {
       appearOnScroll.observe(fade);
     });
-  </script>
-  <script>
-  const navbar = document.querySelector(".navbar");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
+    // Navbar scroll effect
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 60) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      menuToggle.textContent = navLinks.classList.contains("show") ? "✕" : "☰";
+    });
+
+    // Close menu when link is clicked
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Dropdown menu functionality
+    document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+      });
+    });
+
+    // Cart count update
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    function updateCartCount() {
+      const count = cart.reduce((sum, item) => sum + item.qty, 0);
+      const countElement = document.getElementById("cartCount");
+      if (countElement) countElement.innerText = count;
     }
-  });
-</script>
-
-
+    updateCartCount();
+  </script>
 </body>
 </html>

@@ -9,19 +9,24 @@
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">RAB Watch Dealers</div>
+<nav class="navbar" id="navbar">
+  <div class="logo">RAB WATCH</div>
   <div class="menu-toggle" id="menuToggle">☰</div>
 
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">All Watches</a></li>
-    <li><a href="men.html">Men</a></li>
-    <li><a href="women.html" class="active">Women</a></li>
-    <li><a href="contactus.html">Contact</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="products.html">PRODUCTS</a></li>
+    <li><a href="men.html">MEN</a></li>
+    <li><a href="women.html" class="active">WOMEN</a></li>
+    <li><a href="contactus.html">CONTACT</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="cart.html">🛒 Cart <span id="cartCount">0</span></a></li>
   </ul>
 </nav>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin: 20px; flex-wrap: wrap; gap: 10px;">
+  <a href="products.html" style="padding: 10px 20px; background: #d4af37; color: #1a1a1a; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">← Back to Products</a>
+</div>
 
 <section class="page-header fade">
   <h1>Women Watches</h1>
@@ -35,131 +40,257 @@
 
 
 <section class="products-grid">
-  <a href="product.html?name=Rado&price=14999&img=rabRado.jpg" class="product-card fade">
-    <img src="images/rabRado.jpg" alt="Rado">
-    <h3>Rado</h3>
-    <p>KES 14,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Rado&price=14999&img=rabRado.jpg">
+      <img src="images/rabRado.jpg" alt="Rado">
+      <h3>Rado</h3>
+      <p>KES 14,999</p>
+    </a>
+    <button class="add-cart" data-name="Rado" data-price="14999" data-img="images/rabRado.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=MK&price=10999&img=rabMK.jpg" class="product-card fade">
-    <img src="images/rabMK.jpg" alt="MK">
-    <h3>MK</h3>
-    <p>KES 10,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=MK&price=10999&img=rabMK.jpg">
+      <img src="images/rabMK.jpg" alt="MK">
+      <h3>MK</h3>
+      <p>KES 10,999</p>
+    </a>
+    <button class="add-cart" data-name="MK" data-price="10999" data-img="images/rabMK.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Daniel%20Wellington&price=15999&img=rabDanielWellington.jpg" class="product-card fade">
-    <img src="images/rabDanielWellington.jpg" alt="Daniel Wellington">
-    <h3>Daniel Wellington</h3>
-    <p>KES 15,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Daniel%20Wellington&price=15999&img=rabDanielWellington.jpg">
+      <img src="images/rabDanielWellington.jpg" alt="Daniel Wellington">
+      <h3>Daniel Wellington</h3>
+      <p>KES 15,999</p>
+    </a>
+    <button class="add-cart" data-name="Daniel Wellington" data-price="15999" data-img="images/rabDanielWellington.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Michael%20Kors&price=30999&img=rabMichaelKors.jpg" class="product-card fade">
-    <img src="images/rabMichaelKors.jpg" alt="Michael Kors">
-    <h3>Michael Kors</h3>
-    <p>KES 30,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Michael%20Kors&price=30999&img=rabMichaelKors.jpg">
+      <img src="images/rabMichaelKors.jpg" alt="Michael Kors">
+      <h3>Michael Kors</h3>
+      <p>KES 30,999</p>
+    </a>
+    <button class="add-cart" data-name="Michael Kors" data-price="30999" data-img="images/rabMichaelKors.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Fossil%20Rose%20Gold&price=30999&img=rabfossil.jpg" class="product-card fade">
-    <img src="images/rabfossil.jpg" alt="Fossil Rose Gold">
-    <h3>Fossil Rose Gold</h3>
-    <p>KES 30,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Fossil%20Rose%20Gold&price=30999&img=rabfossil.jpg">
+      <img src="images/rabfossil.jpg" alt="Fossil Rose Gold">
+      <h3>Fossil Rose Gold</h3>
+      <p>KES 30,999</p>
+    </a>
+    <button class="add-cart" data-name="Fossil Rose Gold" data-price="30999" data-img="images/rabfossil.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Homies&price=30999&img=rabHomies.jpg" class="product-card fade">
-    <img src="images/rabHomies.jpg" alt="Homies">
-    <h3>Homies</h3>
-    <p>KES 30,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Homies&price=30999&img=rabHomies.jpg">
+      <img src="images/rabHomies.jpg" alt="Homies">
+      <h3>Homies</h3>
+      <p>KES 30,999</p>
+    </a>
+    <button class="add-cart" data-name="Homies" data-price="30999" data-img="images/rabHomies.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Julien&price=30999&img=rabJulien.jpg" class="product-card fade">
-    <img src="images/rabJulien.jpg" alt="Julien">
-    <h3>Julien</h3>
-    <p>KES 30,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Julien&price=30999&img=rabJulien.jpg">
+      <img src="images/rabJulien.jpg" alt="Julien">
+      <h3>Julien</h3>
+      <p>KES 30,999</p>
+    </a>
+    <button class="add-cart" data-name="Julien" data-price="30999" data-img="images/rabJulien.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Rolex%20Oyster&price=30999&img=rabRolexOyster.jpg" class="product-card fade">
-    <img src="images/rabRolexOyster.jpg" alt="Rolex Oyster">
-    <h3>Rolex Oyster</h3>
-    <p>KES 30,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Rolex%20Oyster&price=30999&img=rabRolexOyster.jpg">
+      <img src="images/rabRolexOyster.jpg" alt="Rolex Oyster">
+      <h3>Rolex Oyster</h3>
+      <p>KES 30,999</p>
+    </a>
+    <button class="add-cart" data-name="Rolex Oyster" data-price="30999" data-img="images/rabRolexOyster.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Bvlgari&price=25999&img=rabBvglari.jpg" class="product-card fade">
-    <img src="images/rabBvglari.jpg" alt="Bvlgari">
-    <h3>Bvlgari</h3>
-    <p>KES 25,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Bvlgari&price=25999&img=rabBvglari.jpg">
+      <img src="images/rabBvglari.jpg" alt="Bvlgari">
+      <h3>Bvlgari</h3>
+      <p>KES 25,999</p>
+    </a>
+    <button class="add-cart" data-name="Bvlgari" data-price="25999" data-img="images/rabBvglari.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Abborow&price=25999&img=rabAbborow.jpg" class="product-card fade">
-    <img src="images/rabAbborow.jpg" alt="Abborow">
-    <h3>Abborow</h3>
-    <p>KES 25,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Abborow&price=25999&img=rabAbborow.jpg">
+      <img src="images/rabAbborow.jpg" alt="Abborow">
+      <h3>Abborow</h3>
+      <p>KES 25,999</p>
+    </a>
+    <button class="add-cart" data-name="Abborow" data-price="25999" data-img="images/rabAbborow.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Oevs.co&price=29999&img=rabOevs.co.jpg" class="product-card fade">
-    <img src="images/rabOevs.co.jpg" alt="Oevs.co">
-    <h3>Oevs.co</h3>
-    <p>KES 29,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Oevs.co&price=29999&img=rabOevs.co.jpg">
+      <img src="images/rabOevs.co.jpg" alt="Oevs.co">
+      <h3>Oevs.co</h3>
+      <p>KES 29,999</p>
+    </a>
+    <button class="add-cart" data-name="Oevs.co" data-price="29999" data-img="images/rabOevs.co.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Raga%20Titan&price=35999&img=rabRagaTitan.jpg" class="product-card fade">
-    <img src="images/rabRagaTitan.jpg" alt="Raga Titan">
-    <h3>Raga Titan</h3>
-    <p>KES 35,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Raga%20Titan&price=35999&img=rabRagaTitan.jpg">
+      <img src="images/rabRagaTitan.jpg" alt="Raga Titan">
+      <h3>Raga Titan</h3>
+      <p>KES 35,999</p>
+    </a>
+    <button class="add-cart" data-name="Raga Titan" data-price="35999" data-img="images/rabRagaTitan.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Casio&price=35999&img=rabCasio.jpg" class="product-card fade">
-    <img src="images/rabCasio.jpg" alt="Casio">
-    <h3>Casio</h3>
-    <p>KES 35,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Casio&price=35999&img=rabCasio.jpg">
+      <img src="images/rabCasio.jpg" alt="Casio">
+      <h3>Casio</h3>
+      <p>KES 35,999</p>
+    </a>
+    <button class="add-cart" data-name="Casio" data-price="35999" data-img="images/rabCasio.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=W-Rolex&price=45999&img=rabW-Rolex.jpg" class="product-card fade">
-    <img src="images/rabW-Rolex.jpg" alt="W-Rolex">
-    <h3>W-Rolex</h3>
-    <p>KES 45,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=W-Rolex&price=45999&img=rabW-Rolex.jpg">
+      <img src="images/rabW-Rolex.jpg" alt="W-Rolex">
+      <h3>W-Rolex</h3>
+      <p>KES 45,999</p>
+    </a>
+    <button class="add-cart" data-name="W-Rolex" data-price="45999" data-img="images/rabW-Rolex.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=YSL&price=25999&img=rabYSL.jpg" class="product-card fade">
-    <img src="images/rabYSL.jpg" alt="YSL">
-    <h3>YSL</h3>
-    <p>KES 25,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=YSL&price=25999&img=rabYSL.jpg">
+      <img src="images/rabYSL.jpg" alt="YSL">
+      <h3>YSL</h3>
+      <p>KES 25,999</p>
+    </a>
+    <button class="add-cart" data-name="YSL" data-price="25999" data-img="images/rabYSL.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Bvlgari&price=35999&img=rabBvlgari.jpg" class="product-card fade">
-    <img src="images/rabBvlgari.jpg" alt="Bvlgari">
-    <h3>Bvlgari</h3>
-    <p>KES 35,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Bvlgari&price=35999&img=rabBvlgari.jpg">
+      <img src="images/rabBvlgari.jpg" alt="Bvlgari">
+      <h3>Bvlgari</h3>
+      <p>KES 35,999</p>
+    </a>
+    <button class="add-cart" data-name="Bvlgari" data-price="35999" data-img="images/rabBvlgari.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Oleves&price=20999&img=rabOleves.jpg" class="product-card fade">
-    <img src="images/rabOleves.jpg" alt="Oleves">
-    <h3>Oleves</h3>
-    <p>KES 20,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Oleves&price=20999&img=rabOleves.jpg">
+      <img src="images/rabOleves.jpg" alt="Oleves">
+      <h3>Oleves</h3>
+      <p>KES 20,999</p>
+    </a>
+    <button class="add-cart" data-name="Oleves" data-price="20999" data-img="images/rabOleves.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Tephea&price=45999&img=rabTephea.jpg" class="product-card fade">
-    <img src="images/rabTephea.jpg" alt="Tephea">
-    <h3>Tephea</h3>
-    <p>KES 45,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Tephea&price=45999&img=rabTephea.jpg">
+      <img src="images/rabTephea.jpg" alt="Tephea">
+      <h3>Tephea</h3>
+      <p>KES 45,999</p>
+    </a>
+    <button class="add-cart" data-name="Tephea" data-price="45999" data-img="images/rabTephea.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Geneve&price=75999&img=rabGeneve.jpg" class="product-card fade">
-    <img src="images/rabGeneve.jpg" alt="Geneve">
-    <h3>Geneve</h3>
-    <p>KES 75,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Geneve&price=75999&img=rabGeneve.jpg">
+      <img src="images/rabGeneve.jpg" alt="Geneve">
+      <h3>Geneve</h3>
+      <p>KES 75,999</p>
+    </a>
+    <button class="add-cart" data-name="Geneve" data-price="75999" data-img="images/rabGeneve.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Panthera&price=55999&img=rabPanthera.jpg" class="product-card fade">
-    <img src="images/rabPanthera.jpg" alt="Panthera">
-    <h3>Panthera</h3>
-    <p>KES 55,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Panthera&price=55999&img=rabPanthera.jpg">
+      <img src="images/rabPanthera.jpg" alt="Panthera">
+      <h3>Panthera</h3>
+      <p>KES 55,999</p>
+    </a>
+    <button class="add-cart" data-name="Panthera" data-price="55999" data-img="images/rabPanthera.jpg">🛒</button>
+  </div>
 
-  <a href="product.html?name=Louis%20Vuitton&price=85999&img=rabLouisVuitton.jpg" class="product-card fade">
-    <img src="images/rabLouisVuitton.jpg" alt="Louis Vuitton">
-    <h3>Louis Vuitton</h3>
-    <p>KES 85,999</p>
-  </a>
+  <div class="product-card fade">
+    <a href="product.html?name=Louis%20Vuitton&price=85999&img=rabLouisVuitton.jpg">
+      <img src="images/rabLouisVuitton.jpg" alt="Louis Vuitton">
+      <h3>Louis Vuitton</h3>
+      <p>KES 85,999</p>
+    </a>
+    <button class="add-cart" data-name="Louis Vuitton" data-price="85999" data-img="images/rabLouisVuitton.jpg">🛒</button>
+  </div>
+
+  <div class="product-card fade">
+    <a href="product.html?name=Coach%20Classic&price=42999&img=rabCoach.jpg">
+      <img src="images/rabCoach.jpg" alt="Coach Classic">
+      <h3>Coach Classic</h3>
+      <p>KES 42,999</p>
+    </a>
+    <button class="add-cart" data-name="Coach Classic" data-price="42999" data-img="images/rabCoach.jpg">🛒</button>
+  </div>
+
+  <div class="product-card fade">
+    <a href="product.html?name=Kate%20Spade%20Scallop&price=48999&img=rabKateSpade.jpg">
+      <img src="images/rabKateSpade.jpg" alt="Kate Spade Scallop">
+      <h3>Kate Spade Scallop</h3>
+      <p>KES 48,999</p>
+    </a>
+    <button class="add-cart" data-name="Kate Spade Scallop" data-price="48999" data-img="images/rabKateSpade.jpg">🛒</button>
+  </div>
+
+  <div class="product-card fade">
+    <a href="product.html?name=DKNY%20Soho&price=38999&img=rabDKNY.jpg">
+      <img src="images/rabDKNY.jpg" alt="DKNY Soho">
+      <h3>DKNY Soho</h3>
+      <p>KES 38,999</p>
+    </a>
+    <button class="add-cart" data-name="DKNY Soho" data-price="38999" data-img="images/rabDKNY.jpg">🛒</button>
+  </div>
+
+  <div class="product-card fade">
+    <a href="product.html?name=Swarovski%20Crystalline&price=62999&img=rabSwarovski.jpg">
+      <img src="images/rabSwarovski.jpg" alt="Swarovski Crystalline">
+      <h3>Swarovski Crystalline</h3>
+      <p>KES 62,999</p>
+    </a>
+    <button class="add-cart" data-name="Swarovski Crystalline" data-price="62999" data-img="images/rabSwarovski.jpg">🛒</button>
+  </div>
+
+  <div class="product-card fade">
+    <a href="product.html?name=Guess%20Melody&price=35999&img=rabGuess.jpg">
+      <img src="images/rabGuess.jpg" alt="Guess Melody">
+      <h3>Guess Melody</h3>
+      <p>KES 35,999</p>
+    </a>
+    <button class="add-cart" data-name="Guess Melody" data-price="35999" data-img="images/rabGuess.jpg">🛒</button>
+  </div>
+
+  <div class="product-card fade">
+    <a href="product.html?name=Emporio%20Armani%20AR&price=75999&img=rabEmporio.jpg">
+      <img src="images/rabEmporio.jpg" alt="Emporio Armani">
+      <h3>Emporio Armani AR</h3>
+      <p>KES 75,999</p>
+    </a>
+    <button class="add-cart" data-name="Emporio Armani AR" data-price="75999" data-img="images/rabEmporio.jpg">🛒</button>
+  </div>
+
+  <div class="product-card fade">
+    <a href="product.html?name=Seiko%20Women%20Elegant&price=48999&img=rabSeikoWomen.jpg">
+      <img src="images/rabSeikoWomen.jpg" alt="Seiko Women Elegant">
+      <h3>Seiko Women Elegant</h3>
+      <p>KES 48,999</p>
+    </a>
+    <button class="add-cart" data-name="Seiko Women Elegant" data-price="48999" data-img="images/rabSeikoWomen.jpg">🛒</button>
+  </div>
 </section>
 
 <footer class="footer" id="footer">
@@ -180,11 +311,29 @@
 </footer>
 
 <script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
 
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("show");
+    menuToggle.textContent = navLinks.classList.contains("show") ? "✕" : "☰";
+  });
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      menuToggle.textContent = "☰";
+    });
   });
 
   const faders = document.querySelectorAll(".fade");
@@ -199,6 +348,53 @@
 
   faders.forEach(fade => {
     appearOnScroll.observe(fade);
+  });
+
+  // Initialize cart count
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  updateCartCount();
+
+  // Attach event listeners to existing cart buttons
+  document.querySelectorAll('.add-cart').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const item = {
+        name: btn.dataset.name,
+        price: btn.dataset.price,
+        img: btn.dataset.img,
+        qty: 1
+      };
+
+      const existing = cart.find(p => p.name === item.name);
+      if (existing) existing.qty++;
+      else cart.push(item);
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartCount();
+
+      // Show notification
+      btn.textContent = "✓ Added!";
+      btn.style.opacity = "0.7";
+      setTimeout(() => {
+        btn.textContent = "🛒";
+        btn.style.opacity = "1";
+      }, 2000);
+    });
+  });
+
+  function updateCartCount() {
+    const count = cart.reduce((sum, item) => sum + item.qty, 0);
+    const countElement = document.getElementById("cartCount");
+    if (countElement) countElement.innerText = count;
+  }
+
+  // Dropdown menu functionality
+  document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
   });
 </script>
 

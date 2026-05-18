@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart | RAB Watch Dealers</title>
+  <title>Shopping Cart | RAB Watch Dealers</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-  <div class="logo">RAB Watch Dealers</div>
+<nav class="navbar" id="navbar">
+  <div class="logo">RAB WATCH</div>
   <div class="menu-toggle" id="menuToggle">☰</div>
   <ul class="nav-links" id="navLinks">
     <li><a href="index.html">HOME</a></li>
     <li><a href="products.html">PRODUCTS</a></li>
+    <li><a href="men.html">MEN</a></li>
+    <li><a href="women.html">WOMEN</a></li>
     <li><a href="contactus.html">CONTACT</a></li>
     <li><a href="about.html">ABOUT</a></li>
-    <li>
-      <a href="cart.html">Cart <span id="cartCount">0</span></a>
-    </li>
+    <li><a href="cart.html">🛒 Cart <span id="cartCount">0</span></a></li>
   </ul>
 </nav>
 
 <section class="page-header fade">
-  <h1>Your Cart</h1>
+  <h1>🛒 Your Shopping Cart</h1>
+  <p>Review your items and proceed to checkout</p>
 </section>
 
 <section class="cart-container">
@@ -33,9 +34,24 @@
   <div class="cart-total">
     <h3>Total: KES <span id="cartTotal">0</span></h3>
   </div>
-  <button id="checkoutBtn" class="checkout">Checkout via WhatsApp</button>
-  <button id="clearCart" class="clear-cart-btn">Clear Cart</button>
+  <div style="display: flex; gap: 15px; margin-top: 2rem; justify-content: flex-end; flex-wrap: wrap;">
+    <button id="clearCart" class="clear-cart-btn">🗑️ Clear Cart</button>
+    <button id="checkoutBtn" class="checkout">💳 Checkout via WhatsApp</button>
+  </div>
 </section>
+
+<footer class="footer fade">
+  <div class="footer-content">
+    <h3>RAB Watch Dealers</h3>
+    <p>Wear time. Wear confidence. Wear excellence.</p>
+    <div class="socials">
+      <a href="mailto:owenicardi254@gmail.com">📧 Email</a>
+      <a href="https://instagram.com/owenicardi17" target="_blank">📸 Instagram</a>
+      <a href="https://wa.me/254742184483" target="_blank">💬 WhatsApp</a>
+    </div>
+    <span class="copyright">© 2025 RAB Watch Dealers • Premium Luxury Watches</span>
+  </div>
+</footer>
 
 <script>
   const cartItemsContainer = document.getElementById("cartItems");
@@ -48,7 +64,14 @@
   function renderCart() {
     cartItemsContainer.innerHTML = "";
     if (cart.length === 0) {
-      cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+      cartItemsContainer.innerHTML = `
+        <div style="text-align: center; padding: 60px 20px; color: #a0a0a0;">
+          <p style="font-size: 4rem; margin-bottom: 20px;">🛒</p>
+          <p style="font-size: 1.3rem; margin-bottom: 10px;">Your cart is empty</p>
+          <p style="margin-bottom: 30px;">Start shopping to add items to your cart</p>
+          <a href="products.html" class="cta-btn" style="display: inline-block;">Continue Shopping</a>
+        </div>
+      `;
       cartTotalElem.innerText = "0";
       cartCountElem.innerText = "0";
       return;
@@ -63,9 +86,10 @@
         <img src="${item.img}" alt="${item.name}">
         <div class="item-details">
           <h4>${item.name}</h4>
-          <p>KES ${item.price}</p>
-          <p>Quantity: ${item.qty}</p>
-          <button class="remove-item" data-index="${index}">Remove</button>
+          <p>Price: KES <strong>${item.price.toLocaleString()}</strong></p>
+          <p>Quantity: <strong>${item.qty}</strong></p>
+          <p>Subtotal: KES <strong>${(item.price * item.qty).toLocaleString()}</strong></p>
+          <button class="remove-item" data-index="${index}">🗑️ Remove</button>
         </div>
       `;
       cartItemsContainer.appendChild(itemElem);
@@ -73,7 +97,6 @@
 
     cartTotalElem.innerText = total.toLocaleString();
     cartCountElem.innerText = cart.reduce((sum, item) => sum + item.qty, 0);
-
 
     document.querySelectorAll(".remove-item").forEach(btn => {
       btn.addEventListener("click", () => {
@@ -86,42 +109,70 @@
   }
 
   clearCartBtn.addEventListener("click", () => {
-    cart = [];
-    localStorage.setItem("cart", JSON.stringify(cart));
-    renderCart();
+    if (confirm("Are you sure you want to clear your entire cart?")) {
+      cart = [];
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
   });
 
   renderCart();
 
-  
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
-  menuToggle.addEventListener("click", () => navLinks.classList.toggle("show"));
-</script>
-<button id="checkoutBtn">Checkout via WhatsApp</button>
-
-<script>
-document.getElementById("checkoutBtn").addEventListener("click", () => {
-
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  if (cart.length === 0) return alert("Your cart is empty");
-
-  let message = "Hello RAB Watch Dealers%0A%0A";
-  message += "I would like to place an order:%0A%0A";
-
-  let total = 0;
-
-  cart.forEach(item => {
-    message += `• ${item.name} (x${item.qty}) - KES ${item.price}%0A`;
-    total += item.price * item.qty;
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
   });
 
-  message += `%0ATotal: KES ${total.toLocaleString()}%0A%0APlease confirm availability.`;
+  // Mobile menu toggle
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    menuToggle.textContent = navLinks.classList.contains("show") ? "✕" : "☰";
+  });
 
-  window.open(`https://wa.me/254742184483?text=${message}`);
-});
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
+      menuToggle.textContent = "☰";
+    });
+  });
+
+  // Dropdown menu functionality
+  document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+    });
+  });
 </script>
 
+<script>
+  document.getElementById("checkoutBtn").addEventListener("click", () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart.length === 0) {
+      alert("Your cart is empty. Please add items before checkout.");
+      return;
+    }
+
+    let message = "Hello RAB Watch Dealers%0A%0AI would like to place an order:%0A%0A";
+
+    let total = 0;
+
+    cart.forEach(item => {
+      message += `📦 ${item.name} (Qty: ${item.qty}) - KES ${item.price.toLocaleString()}%0A`;
+      total += item.price * item.qty;
+    });
+
+    message += `%0A💰 Total: KES ${total.toLocaleString()}%0A%0APlease confirm availability and provide payment details.`;
+
+    window.open(`https://wa.me/254742184483?text=${message}`);
+  });
+</script>
 
 </body>
 </html>
